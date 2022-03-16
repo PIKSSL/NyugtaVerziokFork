@@ -29,4 +29,7 @@ public class Nyugta1 {
         System.out.println("******************");
     }
     
+    
+    
 }
+
