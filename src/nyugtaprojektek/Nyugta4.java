@@ -13,15 +13,16 @@ public class Nyugta4 {
         System.out.printf("%14s\n", "Nyugta 3");
         vonalak(1);
         
-        int tetel1 = 350, tetel2 = 90, tetel3 = 1320;
-        kiiratas("Tétel 1",tetel1);
-        kiiratas("Tétel 2",tetel2);
-        kiiratas("Tétel 3",tetel3);
+        int[] tetelek = {350, 90, 1320};
+        kiiratas("Tétel 1",tetelek[0]);
+        kiiratas("Tétel 2",tetelek[1]);
+        kiiratas("Tétel 3",tetelek[2]);
 
 
         vonalak(2);
         
-        int osszesen = tetel1 + tetel2 + tetel3;
+        int osszesen = osszeadas(tetelek);
+        
 
         kiiratas("Összesen",osszesen);
         
@@ -71,5 +72,12 @@ public class Nyugta4 {
     static void kiiratas(String adat, int adat1){
         final String HUF = "Ft";
         System.out.printf("%10s: %5d %s\n", adat, adat1, HUF);
+    }
+    static int osszeadas(int[] adat){
+        int szam = 0;
+        for (int i = 0; i < adat.length; i++) {
+            szam += adat[i];
+        }
+        return szam;
     }
 }
